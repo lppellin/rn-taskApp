@@ -88,8 +88,8 @@ function TaskScreen() {
             </View>
 
 
-            <View>
-                <ScrollView>
+            <View style={styles.taskList}>
+                <ScrollView >
                     {filteredTasks.length > 0 ? (
                         filteredTasks.map(tarefa => (
                             <TaskCard
@@ -132,7 +132,7 @@ function TaskScreen() {
                             placeholder='Data (dd/mm/aaaa)'
                             value={inputData}
                             onChangeText={handleDateInput}
-                            keyboardType='numeric'
+                            keyboardType='numbers-and-punctuation'
                             maxLength={10} // Limita o input a 10 caracteres (dd/mm/aaaa)
                             style={styles.input}
                         />
@@ -242,6 +242,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%',
+    },
+
+    taskList: {
+        flex: 1,
+        width: '90%',
+        paddingHorizontal: 20
     },
 
 });

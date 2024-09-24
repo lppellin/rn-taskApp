@@ -5,7 +5,7 @@ export default function MessagesScreen() {
 
     return (
         <View style={styles.container}>
-            <Text>Não há mensagens para serem lidas</Text>
+            <Text>Não há mensagens para serem lidas.</Text>
         </View>
     )
 }
